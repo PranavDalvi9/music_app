@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/screen/home_screen/home_screen.dart';
 
+import 'screen/playlist_screen/playlist_screen.dart';
 import 'screen/splash_screen/splash_screen.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home: PlayListScreen(),
     );
   }
 }
