@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/screen/Individual_screen/Individual_screen.dart';
 import 'package:music_app/screen/home_screen/widget/favourite_card.dart';
+import 'package:music_app/screen/playlist_screen/playlist_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -151,72 +153,90 @@ class _HomeScreenState extends State<HomeScreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            "assets/images/img_p2.png",
-                            height: 202,
-                            width: 208,
-                          ),
-                          const SizedBox(height: 16),
-                          const Padding(
-                            padding: EdgeInsets.only(left: 6),
-                            child: Text(
-                              "R&B Playlist",
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.white),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const PlayListScreen()),
+                          );
+                        },
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "assets/images/img_p2.png",
+                              height: 202,
+                              width: 208,
                             ),
-                          ),
-                          const SizedBox(height: 4),
-                          Container(
-                            padding: const EdgeInsets.only(left: 6),
-                            child: const Text(
-                              "Chill your mind",
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  color: Color(0xFFA5A5A5)),
+                            const SizedBox(height: 16),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 6),
+                              child: Text(
+                                "R&B Playlist",
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.white),
+                              ),
                             ),
-                          ),
-                        ],
+                            const SizedBox(height: 4),
+                            Container(
+                              padding: const EdgeInsets.only(left: 6),
+                              child: const Text(
+                                "Chill your mind",
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
+                                    color: Color(0xFFA5A5A5)),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       const SizedBox(width: 24),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            "assets/images/img_p1.png",
-                            height: 202,
-                            width: 208,
-                          ),
-                          const SizedBox(height: 16),
-                          const Padding(
-                            padding: EdgeInsets.only(left: 6),
-                            child: Text(
-                              "R&B Playlist",
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.white),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const PlayListScreen()),
+                          );
+                        },
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "assets/images/img_p1.png",
+                              height: 202,
+                              width: 208,
                             ),
-                          ),
-                          const SizedBox(height: 4),
-                          Container(
-                            padding: const EdgeInsets.only(left: 6),
-                            child: const Text(
-                              "Chill your mind",
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  color: Color(0xFFA5A5A5)),
+                            const SizedBox(height: 16),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 6),
+                              child: Text(
+                                "R&B Playlist",
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.white),
+                              ),
                             ),
-                          ),
-                        ],
+                            const SizedBox(height: 4),
+                            Container(
+                              padding: const EdgeInsets.only(left: 6),
+                              child: const Text(
+                                "Chill your mind",
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
+                                    color: Color(0xFFA5A5A5)),
+                              ),
+                            ),
+                          ],
+                        ),
                       )
                     ],
                   ),
@@ -231,16 +251,37 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const SizedBox(height: 24),
                 FavouriteCard(
+                    onTapped: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const IndividualScreen()),
+                      );
+                    },
                     imageString: 'assets/images/fav_1.png',
                     title: 'Bye Bye',
                     subTitle: 'Marshmello, Juice WRLD',
                     time: '2:09'),
                 FavouriteCard(
+                    onTapped: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const IndividualScreen()),
+                      );
+                    },
                     imageString: 'assets/images/fav_2.png',
                     title: 'I Like You',
                     subTitle: 'Post Malone, Doja Cat',
                     time: '2:09'),
                 FavouriteCard(
+                    onTapped: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const IndividualScreen()),
+                      );
+                    },
                     imageString: 'assets/images/fav_3.png',
                     title: 'Fountains',
                     subTitle: 'Drake, Tems',

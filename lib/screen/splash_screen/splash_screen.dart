@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/screen/home_screen/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -42,24 +43,32 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             SizedBox(height: 40),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 16, horizontal: 66),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(32),
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xFF842ED8),
-                    Color(0xFFDB28A9),
-                    Color(0XFF9D1DCA),
-                  ],
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                );
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 16, horizontal: 66),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(32),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color(0xFF842ED8),
+                      Color(0xFFDB28A9),
+                      Color(0XFF9D1DCA),
+                    ],
+                  ),
                 ),
-              ),
-              child: Text(
-                "Continue",
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white),
+                child: Text(
+                  "Continue",
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white),
+                ),
               ),
             ),
             SizedBox(height: 88),
