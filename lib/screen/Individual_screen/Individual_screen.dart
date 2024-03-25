@@ -12,40 +12,45 @@ class _IndividualScreenState extends State<IndividualScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/play_indi.png"),
             fit: BoxFit.cover,
           ),
         ),
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 24),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             children: [
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
               Row(
                 children: [
-                  Icon(
-                    Icons.keyboard_arrow_left,
-                    color: Colors.white,
+                  InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Icon(
+                      Icons.keyboard_arrow_left,
+                      color: Colors.white,
+                    ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Image.asset(
                     'assets/images/menu_icon.png',
                     width: 24,
                   )
                 ],
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Image.asset(
                 'assets/images/play_ind.png',
                 // width: MediaQuery.of(context).size.width,
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -65,12 +70,12 @@ class _IndividualScreenState extends State<IndividualScreen> {
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Image.asset(
                     'assets/images/heart.png',
                     width: 24,
                   ),
-                  SizedBox(width: 20)
+                  const SizedBox(width: 20)
                 ],
               ),
               Row(
@@ -79,22 +84,22 @@ class _IndividualScreenState extends State<IndividualScreen> {
                     'assets/images/shuffle.png',
                     width: 24,
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Image.asset(
                     'assets/images/skip-back.png',
                     width: 24,
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                   Image.asset(
                     'assets/images/pause btn.png',
                     width: 64,
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                   Image.asset(
                     'assets/images/skip-forward.png',
                     width: 24,
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Image.asset(
                     'assets/images/repeat.png',
                     width: 24,

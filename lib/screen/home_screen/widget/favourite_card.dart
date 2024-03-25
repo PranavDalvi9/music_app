@@ -25,11 +25,11 @@ class _FavouriteCardState extends State<FavouriteCard> {
     return InkWell(
       onTap: widget.onTapped,
       child: Container(
-        margin: EdgeInsets.only(bottom: 24),
+        margin: const EdgeInsets.only(bottom: 24),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               height: 56,
               width: 56,
               child: Image.asset(
@@ -43,14 +43,14 @@ class _FavouriteCardState extends State<FavouriteCard> {
               children: [
                 Text(
                   widget.title,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
                       color: Colors.white),
                 ),
                 Text(
                   widget.subTitle,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
                       color: Color(0xFFA5A5A5)),
@@ -60,7 +60,7 @@ class _FavouriteCardState extends State<FavouriteCard> {
             const Spacer(),
             Text(
               widget.time,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
                   color: Colors.white),

@@ -1,8 +1,5 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:music_app/screen/Individual_screen/Individual_screen.dart';
-import 'package:music_app/screen/home_screen/home_screen.dart';
 import 'package:music_app/screen/home_screen/widget/favourite_card.dart';
 
 class PlayListScreen extends StatefulWidget {
@@ -17,7 +14,7 @@ class _PlayListScreenState extends State<PlayListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage("assets/images/playlist.png"),
           fit: BoxFit.cover,
@@ -39,7 +36,7 @@ class _PlayListScreenState extends State<PlayListScreen> {
                   onTap: () {
                     Navigator.pop(context);
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.keyboard_arrow_left,
                     color: Colors.white,
                   ),
@@ -96,10 +93,10 @@ class _PlayListScreenState extends State<PlayListScreen> {
           Expanded(
               child: SingleChildScrollView(
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 24),
+              padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Column(
                 children: [
-                  SizedBox(height: 32),
+                  const SizedBox(height: 32),
                   FavouriteCard(
                       onTapped: () {
                         Navigator.push(

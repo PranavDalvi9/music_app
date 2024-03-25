@@ -137,7 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ),
                                         ),
                                       )
-                                    : Container(
+                                    : const SizedBox(
                                         height: 3,
                                         width: 54,
                                       )

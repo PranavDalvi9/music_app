@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/splash.png"),
             fit: BoxFit.cover,
@@ -23,15 +23,15 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Text(
+            const Text(
               "Feel the beat",
               style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.w700,
                   color: Colors.white),
             ),
-            SizedBox(height: 16),
-            SizedBox(
+            const SizedBox(height: 16),
+            const SizedBox(
               width: 200,
               child: Text(
                 "Emmerse yourself into the world of music today",
@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     color: Color(0xFFA5A5A5)),
               ),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             InkWell(
               onTap: () {
                 Navigator.push(
@@ -51,10 +51,11 @@ class _SplashScreenState extends State<SplashScreen> {
                 );
               },
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 16, horizontal: 66),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 16, horizontal: 66),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(32),
-                  gradient: LinearGradient(
+                  gradient: const LinearGradient(
                     colors: [
                       Color(0xFF842ED8),
                       Color(0xFFDB28A9),
@@ -62,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     ],
                   ),
                 ),
-                child: Text(
+                child: const Text(
                   "Continue",
                   style: TextStyle(
                       fontSize: 16,
@@ -71,7 +72,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 88),
+            const SizedBox(height: 88),
           ],
         ),
       ),
